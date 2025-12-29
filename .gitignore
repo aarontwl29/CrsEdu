@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Database connection (if you want to keep credentials private)
+# db_connect.php
+
+# phpMyAdmin
+phpmyadmin/
+
+# Backup files
+*.bak
+*.backup
