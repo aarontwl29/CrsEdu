@@ -26,5 +26,24 @@ INSERT INTO `students` (`name_chi`, `name_eng`, `nickname`, `gender`, `class`, `
 ('劉華一', 'Liu, Huayi', 'NULL', 'M', '喜樂1', 'Active', 'images/stu/劉華一.jpg'),
 ('李俊凱', 'LI CHUN HOI', 'NULL', 'M', '喜樂1', 'Active', 'images/stu/李俊凱.jpg'),
 
+('曾婉鈴', 'Tsang, Yuen Ling', 'NULL', 'F', '喜樂2', 'Active', 'images/stu/曾婉鈴.jpg'),
+('林國謙', 'Lin, Kwok Him', 'NULL', 'M', '喜樂2', 'Active', 'images/stu/林國謙.jpg'),
+('黃淳軒', 'Wong, Shun Hin', 'Aaron', 'M', '喜樂2', 'Active', 'images/stu/黃淳軒.jpg'),
+('', 'Gurung Raya', 'NULL', 'F', '喜樂2', 'Active', 'images/stu/Raya.jpg'),
+('', 'Bains Priyansh', 'NULL', 'M', '喜樂2', 'Active', 'images/stu/Priyansh.jpg'),
+('吳倬維', 'Ng, Cheuk Wai', '維維', 'M', '喜樂2', 'Active', 'images/stu/吳倬維.jpg'),
+
+('王梓雯', 'Wong, Tsz Man', 'NULL', 'F', '恩誠1', 'Active', 'images/stu/王梓雯.jpg'),
+('吳欣蕾', 'Wu, Xinlei', 'NULL', 'F', '恩誠1', 'Active', 'images/stu/吳欣蕾.jpg'),
+('袁梓琳', 'Yuen, Tsz Lam', 'NULL', 'F', '恩誠1', 'Active', 'images/stu/袁梓琳.jpg'),
+('藍馨怡', 'Lam, Hing Yi', 'NULL', 'F', '恩誠1', 'Active', 'images/stu/藍馨怡.jpg'),
+('阮文謙', 'Yuen, Man Him', 'Lucas', 'M', '恩誠1', 'Active', 'images/stu/阮文謙.jpg'),
+('鄧宇彬', 'Tang, Yu Bin', 'NULL', 'M', '恩誠1', 'Active', 'images/stu/鄧宇彬.jpg'),
+('陳思齊', 'Chan, Sze Chai', 'NULL', 'M', '恩誠1', 'Active', 'images/stu/陳思齊.jpg'),
+('余守仁', 'Yu, Wallace Sau Yan', 'NULL', 'M', '恩誠1', 'Active', 'images/stu/余守仁.jpg'),
+('', 'Rawat, Vania', 'NULL', 'F', '恩誠1', 'Active', 'images/stu/Vania.jpg'),
+
 ('陳明', 'David Wilson', 'Dave', 'Male', 'Class A', 'Graduated', 'images/stu/陳明.jpg');
+
+ 
 
