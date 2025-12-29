@@ -1,10 +1,12 @@
 <?php
-// Include database connection
-require_once 'db_connect.php';
+// Include students class
+require_once 'db/students.php';
+
+// Create Students instance
+$studentsObj = new Students();
 
 // Fetch all students
-$sql = "SELECT * FROM students ORDER BY id ASC";
-$result = $conn->query($sql);
+$students = $studentsObj->getAll('id', 'ASC');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,17 +79,36 @@ $result = $conn->query($sql);
             padding: 40px;
             color: #666;
         }
+        .student-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        .no-img {
+            width: 50px;
+            height: 50px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>CrsEdu - Student Information System</h1>
         
-        <?php if ($result && $result->num_rows > 0): ?>
+        <?php if (!empty($students)): ?>
             <table>
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Photo</th>
                         <th>Chinese Name</th>
                         <th>English Name</th>
                         <th>Nickname</th>
@@ -97,9 +118,16 @@ $result = $conn->query($sql);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while($row = $result->fetch_assoc()): ?>
+                    <?php foreach($students as $row): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($row['id']); ?></td>
+                            <td>
+                                <?php if (!empty($row['image_path']) && file_exists($row['image_path'])): ?>
+                                    <img src="<?php echo htmlspecialchars($row['image_path']); ?>" alt="<?php echo htmlspecialchars($row['name_chi']); ?>" class="student-img">
+                                <?php else: ?>
+                                    <div class="no-img">No Photo</div>
+                                <?php endif; ?>
+                            </td>
                             <td><?php echo htmlspecialchars($row['name_chi']); ?></td>
                             <td><?php echo htmlspecialchars($row['name_eng']); ?></td>
                             <td><?php echo htmlspecialchars($row['nickname'] ?? 'N/A'); ?></td>
@@ -111,7 +139,7 @@ $result = $conn->query($sql);
                                 </span>
                             </td>
                         </tr>
-                    <?php endwhile; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         <?php else: ?>
@@ -123,6 +151,3 @@ $result = $conn->query($sql);
     </div>
 </body>
 </html>
-<?php
-$conn->close();
-?>
