@@ -144,7 +144,7 @@ INSERT INTO `students` (`name_chi`, `name_eng`, `nickname`, `gender`, `class`, `
 ('陳熹橋', 'Chan, Hei Kiu Ethan', 'NULL', 'M', '愛德1', 'Active', 'images/stu/陳熹橋.jpg'),
 
 ('陳頌仁', 'Chan, Chung Yan', 'NULL', 'M', '愛德2', 'Active', 'images/stu/陳頌仁.jpg'),
-('葉凱琳', 'Yip, Danika', 'NULL', 'M', '愛德2', 'Active', 'images/stu/葉凱琳.jpg'),
+('葉凱琳', 'Yip, Danika', 'NULL', 'F', '愛德2', 'Active', 'images/stu/葉凱琳.jpg'),
 ('陳樹兆', 'Tran, Shu Shau', '樹兆', 'M', '愛德2', 'Active', 'images/stu/陳樹兆.jpg'),
 ('曾振軒', 'Tsang, Henry', 'NULL', 'M', '愛德2', 'Active', 'images/stu/曾振軒.jpg'),
 ('陳思龍', 'Chan, Sze Lung', 'NULL', 'M', '愛德2', 'Active', 'images/stu/陳思龍.jpg'),
