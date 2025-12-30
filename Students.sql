@@ -114,9 +114,43 @@ INSERT INTO `students` (`name_chi`, `name_eng`, `nickname`, `gender`, `class`, `
 ('巢永漮', 'Chau, Brendon Wing Hong', '巢巢', 'M', '和平2', 'Active', 'images/stu/巢永漮.jpg'),
 ('鍾皓霖', 'Zhong, Haolin', 'NULL', 'M', '和平2', 'Active', 'images/stu/鍾皓霖.jpg'),
 
+('高曉澄', 'Ko, Hiu Ching', 'NULL', 'F', '和平3', 'Active', 'images/stu/高曉澄.jpg'),
+('葉思行', 'Yip, Sze Hang', 'NULL', 'M', '和平3', 'Active', 'images/stu/葉思行.jpg'),
+('梁月怡', 'Leung, Yuet Yi', 'NULL', 'F', '和平3', 'Active', 'images/stu/梁月怡.jpg'),
+('鄭彥滔', 'Cheng, Yin To', 'NULL', 'M', '和平3', 'Active', 'images/stu/鄭彥滔.jpg'),
+('余恩誠', 'Yu, Yan Shin', 'NULL', 'M', '和平3', 'Active', 'images/stu/余恩誠.jpg'),
+('陳槺霖', 'Chan, Hong Lam', 'NULL', 'M', '和平3', 'Active', 'images/stu/陳槺霖.jpg'),
+('陳紫縈', 'Chan, Tsz Ying', 'NULL', 'F', '和平3', 'Active', 'images/stu/陳紫縈.jpg'),
+('李偉豪', 'Li, Wai Ho Sam', 'NULL', 'M', '和平3', 'Active', 'images/stu/李偉豪.jpg'),
+('吳浩坤', 'Ng, Ho Kwan Jesse', 'NULL', 'M', '和平3', 'Active', 'images/stu/吳浩坤.jpg'),
+('黃信一', 'Wong, Elijah', 'NULL', 'M', '和平3', 'Active', 'images/stu/黃信一.jpg'),
 
+('各山', 'Singh, Sangha Gurshan', 'NULL', 'M', '禮智1', 'Active', 'images/stu/各山.jpg'),
+('曾慶淳', 'Tsang, Hing Shun', 'NULL', 'M', '禮智1', 'Active', 'images/stu/曾慶淳.jpg'),
+('李凱彤', 'Lee, Hoi Tung Alicia', 'NULL', 'F', '禮智1', 'Active', 'images/stu/李凱彤.jpg'),
+('張晉硯', 'Cheung, Henry Chun Yin', 'NULL', 'M', '禮智1', 'Active', 'images/stu/張晉硯.jpg'),
+('劉彥廷', 'Lau, Clinton', 'NULL', 'M', '禮智1', 'Active', 'images/stu/劉彥廷.jpg'),
+('陳昉得', 'Chan, Fong Tak', 'NULL', 'M', '禮智1', 'Active', 'images/stu/陳昉得.jpg'),
+('許鵬程', 'Hui, Kurt Martin Robles', 'NULL', 'M', '禮智1', 'Active', 'images/stu/許鵬程.jpg'),
+('梁均烺', 'Leung, Kwan Long', 'NULL', 'M', '禮智1', 'Active', 'images/stu/梁均烺.jpg'),
+('韓一一', 'Han, Yiyi', 'NULL', 'F', '禮智1', 'Active', 'images/stu/韓一一.jpg'),
+('馬嘉駺', 'Ma, Ka Leung', 'NULL', 'M', '禮智1', 'Active', 'images/stu/馬嘉駺.jpg'),
 
+('阮天行', 'Yuen, Tin Hang', 'NULL', 'M', '愛德1', 'Active', 'images/stu/阮天行.jpg'),
+('鄺明得', 'Kwong, Ming Tak', 'NULL', 'M', '愛德1', 'Active', 'images/stu/鄺明得.jpg'),
+('張誥麟', 'Cheung, Ko Lun', 'NULL', 'M', '愛德1', 'Active', 'images/stu/張誥麟.jpg'),
+('鄭靜文', 'Cheng, Ching Man', 'NULL', 'F', '愛德1', 'Active', 'images/stu/鄭靜文.jpg'),
+('鄧焯琦', 'Tang, Cheuk Kei', 'NULL', 'F', '愛德1', 'Active', 'images/stu/鄧焯琦.jpg'),
+('陳熹橋', 'Chan, Hei Kiu Ethan', 'NULL', 'M', '愛德1', 'Active', 'images/stu/陳熹橋.jpg'),
 
+('陳頌仁', 'Chan, Chung Yan', 'NULL', 'M', '愛德2', 'Active', 'images/stu/陳頌仁.jpg'),
+('葉凱琳', 'Yip, Danika', 'NULL', 'M', '愛德2', 'Active', 'images/stu/葉凱琳.jpg'),
+('陳樹兆', 'Tran, Shu Shau', '樹兆', 'M', '愛德2', 'Active', 'images/stu/陳樹兆.jpg'),
+('曾振軒', 'Tsang, Henry', 'NULL', 'M', '愛德2', 'Active', 'images/stu/曾振軒.jpg'),
+('陳思龍', 'Chan, Sze Lung', 'NULL', 'M', '愛德2', 'Active', 'images/stu/陳思龍.jpg'),
+('吳梓宇', 'Ng, Pierson Sy', 'NULL', 'M', '愛德2', 'Active', 'images/stu/吳梓宇.jpg'),
+('唐子濂', 'Tong, Tsz Lim', 'NULL', 'M', '愛德2', 'Active', 'images/stu/唐子濂.jpg'),
+('叶子睿', 'Ye, Zirui', 'NULL', 'M', '愛德2', 'Active', 'images/stu/叶子睿.jpg'),
 
 ('陳明', 'David Wilson', 'Dave', 'Male', 'Class A', 'Graduated', 'images/stu/陳明.jpg');
 
