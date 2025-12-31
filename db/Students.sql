@@ -150,9 +150,18 @@ INSERT INTO `students` (`name_chi`, `name_eng`, `nickname`, `gender`, `class`, `
 ('陳思龍', 'Chan, Sze Lung', 'NULL', 'M', '愛德2', 'Active', 'images/stu/陳思龍.jpg'),
 ('吳梓宇', 'Ng, Pierson Sy', 'NULL', 'M', '愛德2', 'Active', 'images/stu/吳梓宇.jpg'),
 ('唐子濂', 'Tong, Tsz Lim', 'NULL', 'M', '愛德2', 'Active', 'images/stu/唐子濂.jpg'),
-('叶子睿', 'Ye, Zirui', 'NULL', 'M', '愛德2', 'Active', 'images/stu/叶子睿.jpg'),
+('叶子睿', 'Ye, Zirui', 'NULL', 'M', '愛德2', 'Active', 'images/stu/叶子睿.jpg');
 
-('陳明', 'David Wilson', 'Dave', 'Male', 'Class A', 'Graduated', 'images/stu/陳明.jpg');
-
+-- Create daily reports table
+CREATE TABLE IF NOT EXISTS `daily_reports` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` int(11) NOT NULL COMMENT 'Reference to student',
+  `report_date` date NOT NULL COMMENT 'Date of the report',
+  `content` text NOT NULL COMMENT 'Daily description from teacher',
+  PRIMARY KEY (`id`),
+  KEY `student_id` (`student_id`),
+  KEY `report_date` (`report_date`),
+  CONSTRAINT `fk_daily_reports_student` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Daily student reports from teachers';
 
 
