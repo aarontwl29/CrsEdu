@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `students` (
   `name_chi` varchar(100) NOT NULL COMMENT 'Chinese Name',
   `name_eng` varchar(100) NOT NULL COMMENT 'English Name',
   `nickname` varchar(50) DEFAULT NULL,
+  `short_name` varchar(50) DEFAULT NULL COMMENT 'Short name or symbol',
   `gender` enum('M','F') NOT NULL,
   `class` varchar(50) DEFAULT NULL COMMENT 'Class/Group',
   `status` enum('Active','Inactive','Graduated') DEFAULT 'Active',
@@ -82,15 +83,15 @@ INSERT INTO `students` (`name_chi`, `name_eng`, `nickname`, `gender`, `class`, `
 ('陳柏穎', 'Chan, Pak  Wing', 'NULL', 'F', '信望3', 'Active', 'images/stu/陳柏穎.jpg'),
 ('陳泓迪', 'Chan, Wang Dik', 'NULL', 'M', '信望3', 'Active', 'images/stu/陳泓迪.jpg'),
 
-('麥爾諾', 'Mak, Yi Nok', 'NULL', 'M', '信望4', 'Active', 'images/stu/吳庭軒.jpg'),
-('高戩廷', 'Ko, Chin Ting', 'NULL', 'M', '信望4', 'Active', 'images/stu/楊天朗.jpg'),
-('許羽軒', 'Hui, Yu Hin', 'NULL', 'M', '信望4', 'Active', 'images/stu/鄭善瑜.jpg'),
-('吳承臻', 'Ng, Shing Chun', 'NULL', 'M', '信望4', 'Active', 'images/stu/曾玄彬.jpg'),
-('呂曉峰', 'Lui, Hiu Fung', 'NULL', 'M', '信望4', 'Active', 'images/stu/黃俊熹.jpg'),
-('蔡瑩', 'Choy, Ying', 'NULL', 'F', '信望4', 'Active', 'images/stu/鄭保怡.jpg'),
-('陳樂兒', 'Chan, Lok Yee', 'NULL', 'F', '信望4', 'Active', 'images/stu/李卓謙.jpg'),
-('冼俊賢', 'Sin, Chun Yin', 'NULL', 'M', '信望4', 'Active', 'images/stu/鄭喬澧.jpg'),
-('麥仲諭', 'Mak, Chung Yu', 'NULL', 'M', '信望4', 'Active', 'images/stu/黃志言.jpg'),
+('麥爾諾', 'Mak, Yi Nok', 'NULL', 'M', '信望4', 'Active', 'images/stu/麥爾諾.jpg'),
+('高戩廷', 'Ko, Chin Ting', 'NULL', 'M', '信望4', 'Active', 'images/stu/高戩廷.jpg'),
+('許羽軒', 'Hui, Yu Hin', 'NULL', 'M', '信望4', 'Active', 'images/stu/許羽軒.jpg'),
+('吳承臻', 'Ng, Shing Chun', 'NULL', 'M', '信望4', 'Active', 'images/stu/吳承臻.jpg'),
+('呂曉峰', 'Lui, Hiu Fung', 'NULL', 'M', '信望4', 'Active', 'images/stu/呂曉峰.jpg'),
+('蔡瑩', 'Choy, Ying', 'NULL', 'F', '信望4', 'Active', 'images/stu/蔡瑩.jpg'),
+('陳樂兒', 'Chan, Lok Yee', 'NULL', 'F', '信望4', 'Active', 'images/stu/陳樂兒.jpg'),
+('冼俊賢', 'Sin, Chun Yin', 'NULL', 'M', '信望4', 'Active', 'images/stu/冼俊賢.jpg'),
+('麥仲諭', 'Mak, Chung Yu', 'NULL', 'M', '信望4', 'Active', 'images/stu/麥仲諭.jpg'),
 
 ('李昫賢', 'Lee, Hui Yin Ethan', 'NULL', 'M', '和平1', 'Active', 'images/stu/李昫賢.jpg'),
 ('', 'Stephens, Viliame Lutumailagi', 'NULL', 'M', '和平1', 'Active', 'images/stu/Stephens.jpg'),
@@ -164,4 +165,16 @@ CREATE TABLE IF NOT EXISTS `daily_reports` (
   CONSTRAINT `fk_daily_reports_student` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Daily student reports from teachers';
 
+-- Create absence records table
+CREATE TABLE IF NOT EXISTS `absence_records` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` int(11) NOT NULL COMMENT 'Reference to student',
+  `absence_date` date NOT NULL COMMENT 'Date of absence',
+  `absence_type` enum('Sick Leave','Personal Leave','Medical Appointment','Outside Hong Kong') NOT NULL COMMENT 'Type of absence',
+  PRIMARY KEY (`id`),
+  KEY `student_id` (`student_id`),
+  KEY `absence_date` (`absence_date`),
+  KEY `absence_type` (`absence_type`),
+  CONSTRAINT `fk_absence_records_student` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Student absence records';
 

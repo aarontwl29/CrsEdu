@@ -74,6 +74,7 @@
         
         <a href="students_list.php" class="menu-btn">📚 View Student List</a>
         <a href="daily_report.php" class="menu-btn">📝 Add Daily Report</a>
+        <a href="absence_records.php" class="menu-btn">📅 Record Absences</a>
         
         <div class="footer">
             <p>&copy; 2025 CrsEdu. All rights reserved.</p>
