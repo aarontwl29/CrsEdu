@@ -149,6 +149,7 @@ $students = $studentsObj->getAll('id', 'ASC');
                         <th>Chinese Name</th>
                         <th>English Name</th>
                         <th>Nickname</th>
+                        <th>Short Name</th>
                         <th>Gender</th>
                         <th>Class</th>
                         <th>Status</th>
@@ -177,6 +178,7 @@ $students = $studentsObj->getAll('id', 'ASC');
                                 </a>
                             </td>
                             <td><?php echo htmlspecialchars($row['nickname'] ?? 'N/A'); ?></td>
+                            <td><?php echo htmlspecialchars($row['short_name'] ?? 'N/A'); ?></td>
                             <td><?php echo htmlspecialchars($row['gender']); ?></td>
                             <td><?php echo htmlspecialchars($row['class'] ?? 'N/A'); ?></td>
                             <td>
