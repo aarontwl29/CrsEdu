@@ -459,8 +459,9 @@ $allStudents = $studentsObj->getAll('name_chi', 'ASC');
                             <select name="absence_type[]" required>
                                 <option value="">-- Select Type --</option>
                                 <option value="Sick Leave" selected>Sick Leave</option>
-                                <option value="Personal Leave">Personal Leave</option>
+                                
                                 <option value="Medical Appointment">Medical Appointment</option>
+                                <option value="Personal Leave">Personal Leave</option>
                                 <option value="Outside Hong Kong">Outside Hong Kong</option>
                             </select>
                             <button type="button" class="remove-btn" onclick="removeRow(this)">✕</button>
@@ -472,8 +473,9 @@ $allStudents = $studentsObj->getAll('name_chi', 'ASC');
                         <label>Default Type:</label>
                         <select id="default-absence-type">
                             <option value="Sick Leave" selected>Sick Leave</option>
-                            <option value="Personal Leave">Personal Leave</option>
+                            
                             <option value="Medical Appointment">Medical Appointment</option>
+                            <option value="Personal Leave">Personal Leave</option>
                             <option value="Outside Hong Kong">Outside Hong Kong</option>
                         </select>
                     </div>
@@ -561,8 +563,9 @@ $allStudents = $studentsObj->getAll('name_chi', 'ASC');
                 <select name="absence_type[]" required>
                     <option value="">-- Select Type --</option>
                     <option value="Sick Leave" ${defaultType === 'Sick Leave' ? 'selected' : ''}>Sick Leave</option>
-                    <option value="Personal Leave" ${defaultType === 'Personal Leave' ? 'selected' : ''}>Personal Leave</option>
+                    
                     <option value="Medical Appointment" ${defaultType === 'Medical Appointment' ? 'selected' : ''}>Medical Appointment</option>
+                    <option value="Personal Leave" ${defaultType === 'Personal Leave' ? 'selected' : ''}>Personal Leave</option>
                     <option value="Outside Hong Kong" ${defaultType === 'Outside Hong Kong' ? 'selected' : ''}>Outside Hong Kong</option>
                 </select>
                 <button type="button" class="remove-btn" onclick="removeRow(this)">✕</button>
