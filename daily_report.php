@@ -13,7 +13,10 @@ $savedDate = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_report'])) {
     $studentName = trim($_POST['student_name']);
     $reportDate = $_POST['report_date'];
+    // Trim whitespace and normalize line breaks
     $content = trim($_POST['content']);
+    // Remove excessive empty lines (more than 2 consecutive line breaks become 2)
+    $content = preg_replace('/\n{3,}/', "\n\n", $content);
     
     if (!empty($studentName) && !empty($reportDate) && !empty($content)) {
         // Search for student by Chinese or English name
@@ -244,7 +247,10 @@ if ($reportsResult) {
         }
         .report-content {
             color: #555;
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 15px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
             white-space: pre-wrap;
         }
         .no-reports {
@@ -317,9 +323,7 @@ if ($reportsResult) {
                                 <?php echo date('Y-m-d', strtotime($report['report_date'])); ?>
                             </span>
                         </div>
-                        <div class="report-content">
-                            <?php echo htmlspecialchars($report['content']); ?>
-                        </div>
+                        <div class="report-content"><?php echo htmlspecialchars(trim($report['content'])); ?></div>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
