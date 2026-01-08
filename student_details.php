@@ -36,8 +36,8 @@ $reportsStmt->close();
 $sections = [
     'basic_info' => true,
     'daily_reports' => true,
+    'absences' => true,
     // Add more sections here as needed
-    // 'attendance' => true,
     // 'grades' => true,
 ];
 ?>
@@ -204,7 +204,10 @@ $sections = [
         }
         .report-content {
             color: #555;
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 15px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
             white-space: pre-wrap;
         }
         .no-data {
@@ -265,9 +268,17 @@ $sections = [
             include 'sections/student_daily_reports.php';
         endif;
 
+        // Include section: Absence Calendar
+        if ($sections['absences']):
+            echo '<div id="absences">';
+            $student_id = $studentId; // Make student_id available for the section
+            include 'sections/student_absences.php';
+            echo '</div>';
+        endif;
+
         // Add more sections as needed
-        // if ($sections['attendance']):
-        //     include 'sections/student_attendance.php';
+        // if ($sections['grades']):
+        //     include 'sections/student_grades.php';
         // endif;
         ?>
 

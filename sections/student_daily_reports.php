@@ -8,9 +8,7 @@
                 <div class="report-date">
                     <?php echo date('l, F j, Y', strtotime($report['report_date'])); ?>
                 </div>
-                <div class="report-content">
-                    <?php echo htmlspecialchars($report['content']); ?>
-                </div>
+                <div class="report-content"><?php echo htmlspecialchars(trim($report['content'])); ?></div>
             </div>
         <?php endforeach; ?>
     <?php else: ?>
